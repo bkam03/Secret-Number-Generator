@@ -3,9 +3,9 @@
 'use strict';
 
 module.exports = function() {
-  function randomNumberGen(){
-      var randomNumber = Math.floor(Math.random() * 1000001);
-      return randomNumber;
-    }
-    return randomNumberGen;
+  var secretNumber = Math.floor(Math.random() * 1000001);
+
+  return function(){
+    return secretNumber;
+  }
 };
